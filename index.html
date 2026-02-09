@@ -1,376 +1,579 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Воронка — B2B Лидогенерация</title>
-  <link rel="icon" href="https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/64/1A1A1A/external-funnel-user-interface-febrian-hidayat-glyph-febrian-hidayat.png" type="image/x-icon" />
-  <meta name="description" content="Привлекаем клиентов в B2B без рекламы и SEO">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: white;
-      color: #000;
-      line-height: 1.5;
-    }
-    
-    main {
-      max-width: 672px;
-      margin: 0 auto;
-      padding: 32px 20px;
-    }
-    
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 8px;
-    }
-    
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 48px;
-      }
-    }
-    
-    .subtitle {
-      font-size: 12px;
-      color: rgba(0,0,0,0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    
-    .hero-text {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-    
-    @media (min-width: 768px) {
-      .hero-text {
-        font-size: 24px;
-      }
-    }
-    
-    .hero-description {
-      font-size: 16px;
-      color: rgba(0,0,0,0.7);
-      line-height: 1.5;
-      margin-bottom: 32px;
-    }
-    
-    section {
-      margin-bottom: 32px;
-    }
-    
-    h2 {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(0,0,0,0.5);
-      margin-bottom: 16px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-    
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    ul li {
-      font-size: 16px;
-      color: rgba(0,0,0,0.7);
-      margin-bottom: 8px;
-    }
-    
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    
-    .grid-2 > div {
-      font-size: 16px;
-      color: rgba(0,0,0,0.7);
-    }
-    
-    .process-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    
-    @media (min-width: 768px) {
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-    }
-    
-    .process-item {
-      font-size: 14px;
-    }
-    
-    .process-item strong {
-      display: block;
-    }
-    
-    .process-item p {
-      color: rgba(0,0,0,0.6);
-      margin-top: 4px;
-    }
-    
-    .full-width {
-      grid-column: 1 / -1;
-    }
-    
-    .pilot-card {
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 16px;
-      margin-bottom: 16px;
-    }
-    
-    .pilot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-    
-    .pilot-label {
-      font-size: 12px;
-      color: rgba(0,0,0,0.5);
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    
-    .pilot-value {
-      font-size: 20px;
-      font-weight: 600;
-    }
-    
-    .pilot-value-small {
-      font-size: 14px;
-      color: rgba(0,0,0,0.7);
-    }
-    
-    .price {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    
-    .guarantee {
-      color: rgba(0,0,0,0.5);
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-    
-    .note {
-      font-size: 12px;
-      color: rgba(0,0,0,0.5);
-    }
-    
-    .kpi-box {
-      font-size: 14px;
-      color: rgba(0,0,0,0.7);
-      background: rgba(0,0,0,0.02);
-      padding: 12px;
-    }
-    
-    .tags {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-    
-    .target-text {
-      font-size: 14px;
-      color: rgba(0,0,0,0.7);
-    }
-    
-    .important-list li {
-      font-size: 14px;
-      color: rgba(0,0,0,0.6);
-      margin-bottom: 4px;
-    }
-    
-    .important-text {
-      font-size: 14px;
-      color: rgba(0,0,0,0.8);
-    }
-    
-    .cta-box {
-      background: #000;
-      color: white;
-      padding: 24px;
-      text-align: center;
-    }
-    
-    .cta-box h2 {
-      color: white;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    
-    @media (min-width: 768px) {
-      .cta-box h2 {
-        font-size: 24px;
-      }
-    }
-    
-    .cta-box p {
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      background: white;
-      color: #000;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 12px 24px;
-    }
-    
-    .cta-note {
-      color: rgba(255,255,255,0.5);
-      font-size: 12px;
-      margin-top: 16px;
-    }
-    
-    footer {
-      border-top: 1px solid rgba(0,0,0,0.1);
-      padding: 16px 20px;
-    }
-    
-    .footer-content {
-      max-width: 672px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: rgba(0,0,0,0.4);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспертные клубы для контактных лиц клиентов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #1a1a1a;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .presentation {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background: #ffffff;
+            border-right: 1px solid #eaeaea;
+            padding: 24px 16px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .slide-nav {
+            list-style: none;
+        }
+        
+        .slide-nav-item {
+            margin-bottom: 8px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .slide-nav-item a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .slide-nav-item a:hover {
+            background: #f1f5f9;
+            color: #2d3748;
+        }
+        
+        .slide-nav-item.active a {
+            background: #1a56db;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .slide-number {
+            display: inline-block;
+            width: 24px;
+            color: #6b7280;
+            margin-right: 8px;
+            text-align: right;
+        }
+        
+        .active .slide-number {
+            color: #93c5fd;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .slide-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            max-width: 1000px;
+            width: 100%;
+            min-height: 540px;
+            padding: 60px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .slide-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #111827;
+        }
+        
+        .slide-subtitle {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 32px;
+            color: #1f2937;
+        }
+        
+        .slide-content {
+            font-size: 28px;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .slide-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+        
+        .slide-list li {
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        .slide-list li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1a56db;
+        }
+        
+        .slide-emphasis {
+            color: #1a56db;
+            font-weight: 600;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: white;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #4b5563;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #e5e7eb;
+            color: #111827;
+        }
+        
+        .btn-primary {
+            background: #1a56db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1e4bb5;
+        }
+        
+        .slide-counter {
+            font-size: 16px;
+            color: #6b7280;
+            display: flex;
+            align-items: center;
+        }
+        
+        .slide-navigation {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .slide-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            color: #9ca3af;
+        }
+        
+        .slide-number-badge {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            background: #f3f4f6;
+            color: #6b7280;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 1200px) {
+            .slide {
+                padding: 40px;
+                min-height: 480px;
+            }
+            
+            .slide-title {
+                font-size: 40px;
+            }
+            
+            .slide-subtitle {
+                font-size: 28px;
+            }
+            
+            .slide-content {
+                font-size: 24px;
+            }
+            
+            .slide-list li {
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .presentation {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+                padding: 16px;
+            }
+            
+            .sidebar-title {
+                margin-bottom: 16px;
+                font-size: 16px;
+            }
+            
+            .slide-nav-item a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            
+            .slide {
+                padding: 30px;
+                min-height: 400px;
+            }
+            
+            .slide-title {
+                font-size: 32px;
+            }
+            
+            .slide-subtitle {
+                font-size: 24px;
+            }
+            
+            .slide-content {
+                font-size: 20px;
+            }
+            
+            .slide-list li {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <!-- Header -->
-    <div style="margin-bottom: 32px;">
-      <h1><img width="27" height="27" src="https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/64/1A1A1A/external-funnel-user-interface-febrian-hidayat-glyph-febrian-hidayat.png" alt="external-funnel-user-interface-febrian-hidayat-glyph-febrian-hidayat"/> воронка</h1>
-      
-    </div>
-
-    <!-- Что делаем -->
-    <section>
-      <p class="hero-text">Привлекаем клиентов в B2B</p>
-      <p class="hero-description">Находим тех, кто хочет у вас купить, и передаём их вашему отделу продаж.</p>
-    </section>
-
-    <!-- Проблема -->
-    <section>
-      <h2>Проблемы</h2>
-      <ul>
-        <li>· Лиды с рекламы стоят дорого</li>
-        <li>· SEO долго раскручивается</li>
-        <li>· Вы не контролируете, кто к вам придёт</li>
-        <li>· Всё завязано на рекламные экосистемы</li>
-      </ul>
-    </section>
-
-    <!-- Решение <p style="font-size: 18px; color: rgba(0,0,0,0.8); margin-bottom: 16px;"> -->
-    <section>
-      <h2>Решение</h2><ul>
-      <li>Вместо ожидания заявок - с помощью персонализированных рассылок в мессенджерах находим потенциальных клиентов, готовых на продолжение диалога с вашим отделом продаж.</li>
-    </ul>
-    </section>
-
-    <!-- Как работает -->
-    <section>
-      <h2>Как работает</h2>
-      <ul>
-        <li><b>1. Анализ бизнеса. </b>Мы разбираемся в вашем продукте и выясняем: что, кому и зачем продаёте, кто уже покупал и какие результаты получил, какие попытки холодного привлечения уже были и почему не сработали.</li>
-        <li><b>2. Формирование гипотез. </b>Это связки из должности, компании и триггера для тех, к кому мы будем стучаться. Например, руководители отдела продаж из детейлинг-центров в Москве, у которых есть активные вакансии менеджеров.</li>
-        <li><b>3. Формирование базы. </b>Собираем контакты людей, которые подходят под гипотезы. В качестве источников используем профессиональные сообщества, сервисы для проверки контрагентов, цифровые следы и специализированно ПО.</li>
-        <li><b>4. Первичные касания. </b>В зависимости от гипотезы и базы используем либо автоматизированные рассылки с минимально возможной персонализацией, либо ручные сообщения и звонки с глубокой проработкой каждого контакта.</li>
-        <li><b>5. Пинги. </b>Регулярно напоминаем о себе тем контакта, которые не ответили на первичное касание - добиваемся максимально возможной конверсии.</li>
-        <li><b>6. Передача контакта. </b>Передаём отделу продаж не просто лид из формы, а живого человека, который соответствует нужной должности, работает в подходящей компании и готов продолжить диалог.</li>
-      </ul>
-    </section>
-
-    <!-- Пилот -->
-    <section>
-      <h2>Пилотный запуск</h2>
-      <div class="pilot-card">
-        <div class="pilot-grid">
-          <div>
-            <p class="pilot-label">Срок</p>
-            <p class="pilot-value-small">3 недели</p>
-          </div>
-          <div>
-            <p class="pilot-label">Целевые показатели</p>
-            <p class="pilot-value-small">Обсуждаются индивидуально</p>
-          </div>
+    <div class="presentation">
+        <div class="sidebar">
+            <div class="sidebar-title">Экспертные клубы для контактных лиц клиентов</div>
+            <ul class="slide-nav" id="slideNav">
+                <!-- Slide navigation will be generated by JavaScript -->
+            </ul>
         </div>
-        <p class="price">110 000 ₽</p>
-        <p class="guarantee">Вернём 50%, если целевые показатели не будут достигнуты</p>
-      </div>
-      <p class="kpi-box">Как если бы вы наняли SDR за 80 000 ₽ NET</p>
-    </section>
-
-    <!-- Для кого -->
-    <section>
-      <h2>Что дальше</h2>
-      <ul>
-      <li>По итогам пилота возможны варианты: ежемесячная работа, оплата за лид, передача методологии и обучение вашей команды.</li>
-    </ul>
-    </section>
-
-    <!-- Важно -->
-    <section>
-      <h2>Важно понимать</h2>
-      <ul>
-        <li>· Это не волшебная кнопка</li>
-        <li>· Это не массовый спам</li>
-        <li>· Это не замена отделу продаж</li>
-        <li>· Это не гарантированные сделки</li>
-      </ul>
-    </section>
-
-    <!-- CTA -->
-    <section style="margin-bottom: 32px;">
-      <div class="cta-box">
-        <h2>Хотите увидеть кейсы?</h2>
-        <p>Все цифры, диалоги и разборы — в Telegram</p>
-        <a href="https://t.me/sovladco" target="_blank" rel="noopener noreferrer" class="cta-button">Перейти в Telegram</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <span>© 2026 Воронка</span>
-      <span>Москва</span>
+        
+        <div class="main-content">
+            <div class="slide-container">
+                <div class="slide" id="currentSlide">
+                    <!-- Slide content will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div>
+                    <button class="btn" id="prevBtn">← Назад</button>
+                </div>
+                
+                <div class="slide-counter">
+                    <span id="currentSlideNum">1</span> / <span id="totalSlides">11</span>
+                </div>
+                
+                <div class="slide-navigation">
+                    <button class="btn btn-primary" id="nextBtn">Далее →</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+
+    <script>
+        // Presentation data
+        const slides = [
+            {
+                title: "Экспертные клубы для контактных лиц клиентов",
+                subtitle: "Инструмент удержания и роста",
+                content: ""
+            },
+            {
+                title: "Наблюдение",
+                subtitle: "",
+                content: "Мы работаем не только с компаниями, но и с конкретными людьми внутри них:",
+                list: [
+                    "бухгалтеры",
+                    "финансисты",
+                    "руководители подразделений",
+                    "коммерческие директора"
+                ]
+            },
+            {
+                title: "Проблема",
+                subtitle: "",
+                content: "Эти люди регулярно меняют работу.",
+                list: [
+                    "После их ухода контакт с ними теряется",
+                    "Связь с нашей компанией обрывается"
+                ]
+            },
+            {
+                title: "Упущенная возможность",
+                subtitle: "",
+                content: "Эти люди:",
+                list: [
+                    "уже знают нас",
+                    "доверяют нашей экспертизе",
+                    "понимают наш стиль работы",
+                    "могут рекомендовать нас на новом месте работы"
+                ]
+            },
+            {
+                title: "Факт",
+                subtitle: "",
+                content: "Такие рекомендации уже происходили и приводили к новым договорам.",
+                list: [
+                    "Но это не системно",
+                    "Зависит от случая",
+                    "Не управляется"
+                ]
+            },
+            {
+                title: "Решение",
+                subtitle: "",
+                content: "Создать закрытые профессиональные клубы для контактных лиц по ролям.",
+                list: [
+                    "Это системный формат работы с людьми, а не только с компаниями."
+                ]
+            },
+            {
+                title: "Что такое клуб",
+                subtitle: "",
+                content: "Клуб - это закрытое сообщество, в котором представитель Kelin торгует лицом и формирует доверительные отношения с участниками через",
+                list: [
+                    "релеватные новости с привязкой юриспруденции к сфере деятельности участников",
+                    "обсуждение реальных ситуаций",
+                    "нетворкинг"
+                ]
+            },
+            {
+                title: "Примеры клубов",
+                subtitle: "",
+                content: "",
+                list: [
+                    "Юристы для бухгалтеров и финансистов",
+                    "Юристы для коммерсантов",
+                    "Юристы для руководителей"
+                ]
+            },
+            {
+                title: "Формат работы",
+                subtitle: "",
+                content: "",
+                list: [
+                    "20–30 участников",
+                    "закрытый чат в телеграме",
+                    "1–2 встречи в квартал",
+                    "практические кейсы",
+                    "живое обсуждение"
+                ]
+            },
+            {
+                title: "Результат для компании",
+                subtitle: "",
+                content: "",
+                list: [
+                    "рост рекомендаций",
+                    "более тёплые новые клиенты",
+                    "сокращение цикла сделки",
+                    "усиление доверия к фирме"
+                ]
+            },
+            {
+                title: "Вывод",
+                subtitle: "",
+                content: "Люди меняют компании.",
+                list: [
+                    "Если мы не пойдём с ними — с ними пойдут другие юристы."
+                ]
+            }
+        ];
+
+        // Initialize presentation
+        let currentSlideIndex = 0;
+        const totalSlides = slides.length;
+        
+        // DOM elements
+        const slideContainer = document.getElementById('currentSlide');
+        const slideNav = document.getElementById('slideNav');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentSlideNum = document.getElementById('currentSlideNum');
+        const totalSlidesEl = document.getElementById('totalSlides');
+        
+        // Initialize slide navigation
+        function initSlideNavigation() {
+            slides.forEach((slide, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'slide-nav-item';
+                if (index === 0) listItem.classList.add('active');
+                
+                const slideNumber = document.createElement('span');
+                slideNumber.className = 'slide-number';
+                slideNumber.textContent = (index + 1).toString().padStart(2, '0');
+                
+                const link = document.createElement('a');
+                link.href = '#';
+                link.innerHTML = `${slideNumber.outerHTML} ${slide.title}`;
+                
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    goToSlide(index);
+                });
+                
+                listItem.appendChild(link);
+                slideNav.appendChild(listItem);
+            });
+            
+            totalSlidesEl.textContent = totalSlides;
+        }
+        
+        // Render current slide
+        function renderSlide() {
+            const slide = slides[currentSlideIndex];
+            
+            let slideHTML = `
+                <div class="slide-number-badge">${currentSlideIndex + 1}</div>
+                <h1 class="slide-title">${slide.title}</h1>
+            `;
+            
+            if (slide.subtitle) {
+                slideHTML += `<h2 class="slide-subtitle">${slide.subtitle}</h2>`;
+            }
+            
+            if (slide.content) {
+                slideHTML += `<div class="slide-content">${slide.content}</div>`;
+            }
+            
+            if (slide.list && slide.list.length > 0) {
+                slideHTML += `<ul class="slide-list">`;
+                slide.list.forEach(item => {
+                    slideHTML += `<li>${item}</li>`;
+                });
+                slideHTML += `</ul>`;
+            }
+            
+            // Add footer for first slide
+            if (currentSlideIndex === 0) {
+                slideHTML += `<div class="slide-footer">Инструмент удержания и роста</div>`;
+            }
+            
+            slideContainer.innerHTML = slideHTML;
+            currentSlideNum.textContent = currentSlideIndex + 1;
+            
+            // Update navigation
+            document.querySelectorAll('.slide-nav-item').forEach((item, index) => {
+                if (index === currentSlideIndex) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Update button states
+            prevBtn.disabled = currentSlideIndex === 0;
+            nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+        }
+        
+        // Navigate to specific slide
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlideIndex = index;
+                renderSlide();
+            }
+        }
+        
+        // Next slide
+        function nextSlide() {
+            if (currentSlideIndex < totalSlides - 1) {
+                currentSlideIndex++;
+                renderSlide();
+            }
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                renderSlide();
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key >= 1 && e.key <= 9) {
+                const num = parseInt(e.key);
+                if (num <= totalSlides) {
+                    goToSlide(num - 1);
+                }
+            }
+        });
+        
+        // Initialize presentation
+        initSlideNavigation();
+        renderSlide();
+        
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+    </script>
 </body>
 </html>
